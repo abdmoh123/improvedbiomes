@@ -1,0 +1,6 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "improvedbiomes:block/baobab_leaves"
+  }
+}

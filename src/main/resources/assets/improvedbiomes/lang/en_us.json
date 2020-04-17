@@ -1,3 +1,23 @@
 {
+  "_comment": "Blocks",
+  "block.improvedbiomes.maple_leaves": "Maple Leaves",
+  "block.improvedbiomes.autumn_birch_leaves": "Fall Birch Leaves",
+  "block.improvedbiomes.baobab_leaves": "Baobab Leaves",
+  "block.improvedbiomes.maple_sapling": "Maple Sapling",
+  "block.improvedbiomes.autumn_birch_sapling": "Fall Birch Sapling",
+  "block.improvedbiomes.baobab_sapling": "Baobab Sapling",
+  "block.improvedbiomes.maple_planks": "Maple Planks",
+  "block.improvedbiomes.baobab_planks": "Baobab Planks",
+  "block.improvedbiomes.maple_log": "Maple Log",
+  "block.improvedbiomes.baobab_log": "Baobab Log",
+  "block.improvedbiomes.stripped_maple_log": "Stripped Maple Log",
+  "block.improvedbiomes.stripped_baobab_log": "Stripped Baobab Log",
+  "block.improvedbiomes.stripped_maple_wood": "Stripped Maple Wood",
+  "block.improvedbiomes.stripped_baobab_wood": "Stripped Baobab Wood",
+  "block.improvedbiomes.maple_wood": "Maple Wood",
+  "block.improvedbiomes.baobab_wood": "Baobab Wood",
 
+  "_comment": "Biomes",
+  "biome.improvedbiomes.maple_forest": "Maple Forest",
+  "biome.improvedbiomes.pumpkin_plains": "Pumpkin Plains"
 }

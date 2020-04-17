@@ -1,0 +1,6 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "improvedbiomes:block/autumn_birch_leaves"
+  }
+}

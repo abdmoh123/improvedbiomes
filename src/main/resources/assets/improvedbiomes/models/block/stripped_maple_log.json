@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "improvedbiomes:block/stripped_maple_log_top",
+    "side": "improvedbiomes:block/stripped_maple_log"
+  }
+}
