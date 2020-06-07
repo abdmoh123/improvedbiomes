@@ -2,10 +2,7 @@ package com.abdmoh.improvedbiomes.world.features;
 
 import com.abdmoh.improvedbiomes.init.ModBlocks;
 import com.mojang.datafixers.Dynamic;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.LogBlock;
+import net.minecraft.block.*;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
@@ -23,7 +20,6 @@ import java.util.function.Function;
 public class BaobabTreeFeature extends HugeTreesFeature<NoFeatureConfig> {
     public BaobabTreeFeature(Function<Dynamic<?>, ? extends NoFeatureConfig> configFactoryIn, boolean doBlockNotifyOnPlace, int baseHeightIn, int extraRandomHeightIn, BlockState trunkIn, BlockState leafIn) {
         super(configFactoryIn, doBlockNotifyOnPlace, baseHeightIn, extraRandomHeightIn, trunkIn, leafIn);
-        setSapling(ModBlocks.BAOBAB_SAPLING);
     }
 
     @Override
@@ -91,7 +87,7 @@ public class BaobabTreeFeature extends HugeTreesFeature<NoFeatureConfig> {
                     this.setLogState(changedBlocks, worldIn, blockPos3, this.trunk, boundsIn);
                 }
 
-                //places north east log block
+                /*//places north east log block
                 BlockPos blockPos4 = blockPos.east().east();
                 if (checkBlockPos(worldIn, blockPos4)) {
                     this.setLogState(changedBlocks, worldIn, blockPos4, this.trunk, boundsIn);
@@ -119,7 +115,7 @@ public class BaobabTreeFeature extends HugeTreesFeature<NoFeatureConfig> {
                 BlockPos blockPos8 = blockPos.south().south().east().east();
                 if (checkBlockPos(worldIn, blockPos8)) {
                     this.setLogState(changedBlocks, worldIn, blockPos8, this.trunk, boundsIn);
-                }
+                }*/
             }
         }
         return true;
@@ -142,12 +138,12 @@ public class BaobabTreeFeature extends HugeTreesFeature<NoFeatureConfig> {
         return direction$axis;
     }
 
-    private static boolean checkBlockPos(IWorldGenerationBaseReader p_214587_0_, BlockPos p_214587_1_) {
-        if (!(p_214587_0_ instanceof net.minecraft.world.IWorldReader)) // FORGE: Redirect to state method when possible
-            return p_214587_0_.hasBlockState(p_214587_1_, (p_214573_0_) -> {
+    private static boolean checkBlockPos(IWorldGenerationBaseReader worldGenBaseReader, BlockPos blockPos) {
+        if (!(worldGenBaseReader instanceof net.minecraft.world.IWorldReader)) // FORGE: Redirect to state method when possible
+            return worldGenBaseReader.hasBlockState(blockPos, (p_214573_0_) -> {
                 Block block = p_214573_0_.getBlock();
                 return p_214573_0_.isAir() || p_214573_0_.isIn(BlockTags.LEAVES) || block == Blocks.GRASS_BLOCK || Block.isDirt(block) || block.isIn(BlockTags.LOGS) || block.isIn(BlockTags.SAPLINGS) || block == Blocks.VINE;
             });
-        else return p_214587_0_.hasBlockState(p_214587_1_, state -> state.canBeReplacedByLogs((net.minecraft.world.IWorldReader)p_214587_0_, p_214587_1_));
+        else return worldGenBaseReader.hasBlockState(blockPos, state -> state.canBeReplacedByLogs((net.minecraft.world.IWorldReader)worldGenBaseReader, blockPos));
     }
 }

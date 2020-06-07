@@ -11,12 +11,12 @@ import java.util.Random;
 
 public class BaobabTree extends BigTree {
     @Nullable
-    public AbstractTreeFeature<NoFeatureConfig> getBigTreeFeature(Random random) {
+    protected AbstractTreeFeature<NoFeatureConfig> getBigTreeFeature(Random random) {
         return (new BaobabTreeFeature(NoFeatureConfig::deserialize, true, 10, 4, ModBlocks.BAOBAB_LOG.getDefaultState(), ModBlocks.BAOBAB_LEAVES.getDefaultState()));
     }
 
     @Nullable
-    public AbstractTreeFeature<NoFeatureConfig> getTreeFeature(Random random) {
+    protected AbstractTreeFeature<NoFeatureConfig> getTreeFeature(Random random) {
         return null;
     }
 }

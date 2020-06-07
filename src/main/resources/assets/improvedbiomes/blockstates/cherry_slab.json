@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "improvedbiomes:block/cherry_slab" },
+    "type=top": { "model": "improvedbiomes:block/cherry_slab_top" },
+    "type=double": { "model": "improvedbiomes:block/cherry_planks" }
+  }
+}

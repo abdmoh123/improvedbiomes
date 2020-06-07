@@ -13,7 +13,7 @@ public class ModBiomes {
 
     public static void registerBiomes() {
         registerBiome(MAPLE_FOREST, BiomeType.COOL, 80, Type.FOREST, Type.COLD);
-        registerBiome(MAPLE_FOREST, BiomeType.COOL, 80, Type.PLAINS, Type.COLD);
+        registerBiome(PUMPKIN_PLAINS, BiomeType.COOL, 80, Type.PLAINS, Type.COLD);
     }
 
     public static void registerBiome(Biome biome, BiomeType biomeType, int chance, Type... types) {

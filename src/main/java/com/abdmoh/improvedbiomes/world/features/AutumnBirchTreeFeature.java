@@ -4,6 +4,7 @@ import com.abdmoh.improvedbiomes.init.ModBlocks;
 import com.mojang.datafixers.Dynamic;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.SaplingBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.gen.IWorldGenerationReader;
@@ -23,7 +24,6 @@ public class AutumnBirchTreeFeature extends AbstractTreeFeature<NoFeatureConfig>
     public AutumnBirchTreeFeature(Function<Dynamic<?>, ? extends NoFeatureConfig> configIn, boolean doBlockNotifyIn, boolean extraRandomHeightIn) {
         super(configIn, doBlockNotifyIn);
         this.useExtraRandomHeight = extraRandomHeightIn;
-        setSapling(ModBlocks.AUTUMN_BIRCH_SAPLING);
     }
 
     @Override

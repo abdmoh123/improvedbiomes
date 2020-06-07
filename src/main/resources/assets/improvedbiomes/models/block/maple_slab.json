@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "improvedbiomes:block/maple_planks",
+    "top": "improvedbiomes:block/maple_planks",
+    "side": "improvedbiomes:block/maple_planks"
+  }
+}

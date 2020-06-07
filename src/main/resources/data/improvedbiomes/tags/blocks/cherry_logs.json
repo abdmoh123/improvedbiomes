@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "improvedbiomes:cherry_log",
+    "improvedbiomes:cherry_wood",
+    "improvedbiomes:stripped_cherry_log",
+    "improvedbiomes:stripped_cherry_wood"
+  ]
+}

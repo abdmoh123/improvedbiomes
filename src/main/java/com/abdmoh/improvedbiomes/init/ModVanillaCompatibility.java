@@ -22,6 +22,8 @@ public class ModVanillaCompatibility {
         registerStrippableBlocks(ModBlocks.BAOBAB_WOOD, ModBlocks.STRIPPED_BAOBAB_WOOD);
         registerStrippableBlocks(ModBlocks.MAPLE_LOG, ModBlocks.STRIPPED_MAPLE_LOG);
         registerStrippableBlocks(ModBlocks.MAPLE_WOOD, ModBlocks.STRIPPED_MAPLE_WOOD);
+        registerStrippableBlocks(ModBlocks.CHERRY_LOG, ModBlocks.STRIPPED_CHERRY_LOG);
+        registerStrippableBlocks(ModBlocks.CHERRY_WOOD, ModBlocks.STRIPPED_CHERRY_WOOD);
 
         //makes blocks flammable
         registerFlammableBlocks(ModBlocks.BAOBAB_LEAVES, 30, 60);

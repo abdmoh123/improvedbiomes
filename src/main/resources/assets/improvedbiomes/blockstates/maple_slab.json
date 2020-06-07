@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "improvedbiomes:block/maple_slab" },
+    "type=top": { "model": "improvedbiomes:block/maple_slab_top" },
+    "type=double": { "model": "improvedbiomes:block/maple_planks" }
+  }
+}

@@ -5,6 +5,7 @@ import com.google.common.collect.Lists;
 import com.mojang.datafixers.Dynamic;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.LogBlock;
+import net.minecraft.block.SaplingBlock;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
@@ -25,7 +26,6 @@ public class BigMapleTreeFeature extends AbstractTreeFeature<NoFeatureConfig> {
 
     public BigMapleTreeFeature(Function<Dynamic<?>, ? extends NoFeatureConfig> configFactoryIn, boolean doBlockNotifyIn) {
         super(configFactoryIn, doBlockNotifyIn);
-        setSapling(ModBlocks.MAPLE_SAPLING);
     }
 
     private void crossSection(IWorldGenerationReader worldIn, BlockPos pos, float p_208529_3_, MutableBoundingBox p_208529_4_, Set<BlockPos> changedBlocks) {

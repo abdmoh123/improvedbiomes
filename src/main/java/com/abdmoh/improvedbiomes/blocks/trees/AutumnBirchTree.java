@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class AutumnBirchTree extends Tree {
     @Nullable
-    public AbstractTreeFeature<NoFeatureConfig> getTreeFeature(Random random) {
+    protected AbstractTreeFeature<NoFeatureConfig> getTreeFeature(Random random) {
         return new AutumnBirchTreeFeature(NoFeatureConfig::deserialize, true, false);
     }
 }

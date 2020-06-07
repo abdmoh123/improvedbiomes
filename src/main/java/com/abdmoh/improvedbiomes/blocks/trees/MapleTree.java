@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class MapleTree extends Tree {
     @Nullable
-    public AbstractTreeFeature<NoFeatureConfig> getTreeFeature(Random random) {
+    protected AbstractTreeFeature<NoFeatureConfig> getTreeFeature(Random random) {
         return (AbstractTreeFeature)(random.nextInt(10) == 0 ? new BigMapleTreeFeature(NoFeatureConfig::deserialize, true) : new TreeFeature(NoFeatureConfig::deserialize, true, 4, ModBlocks.MAPLE_LOG.getDefaultState(), ModBlocks.MAPLE_LEAVES.getDefaultState(), false));
     }
 }

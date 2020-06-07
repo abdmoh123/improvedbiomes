@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "improvedbiomes:cherry_logs"
+    }
+  ],
+  "result": {
+    "item": "improvedbiomes:cherry_planks",
+    "count": 4
+  }
+}

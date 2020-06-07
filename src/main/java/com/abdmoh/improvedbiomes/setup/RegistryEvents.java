@@ -1,15 +1,10 @@
 package com.abdmoh.improvedbiomes.setup;
 
 import com.abdmoh.improvedbiomes.ImprovedBiomes;
-import com.abdmoh.improvedbiomes.blocks.*;
-import com.abdmoh.improvedbiomes.init.ModBiomes;
-import com.abdmoh.improvedbiomes.init.ModBlocks;
-import com.abdmoh.improvedbiomes.world.gen.biomes.MapleForestBiome;
-import com.abdmoh.improvedbiomes.world.gen.biomes.PumpkinPlainsBiome;
+import com.abdmoh.improvedbiomes.init.*;
+import com.abdmoh.improvedbiomes.world.gen.biomes.*;
 import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -21,58 +16,95 @@ import net.minecraftforge.fml.common.Mod;
 public class RegistryEvents extends ImprovedBiomes {
     @SubscribeEvent
     public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
+        //registers blocks
         event.getRegistry().registerAll(
-                new MapleLeaves(),
-                new AutumnBirchLeaves(),
-                new BaobabLeaves(),
-                new MapleSapling(),
-                new AutumnBirchSapling(),
-                new BaobabSapling(),
-                new MaplePlanks(),
-                new BaobabPlanks(),
-                new MapleLog(),
-                new BaobabLog(),
-                new StrippedMapleLog(),
-                new StrippedBaobabLog(),
-                new StrippedMapleWood(),
-                new StrippedBaobabWood(),
-                new MapleWood(),
-                new BaobabWood()
+                //building blocks
+                ModBlocks.CHERRY_PLANKS,
+                ModBlocks.MAPLE_PLANKS,
+                ModBlocks.BAOBAB_PLANKS,
+                ModBlocks.CHERRY_LOG,
+                ModBlocks.MAPLE_LOG,
+                ModBlocks.BAOBAB_LOG,
+                ModBlocks.STRIPPED_CHERRY_LOG,
+                ModBlocks.STRIPPED_MAPLE_LOG,
+                ModBlocks.STRIPPED_BAOBAB_LOG,
+                ModBlocks.STRIPPED_CHERRY_WOOD,
+                ModBlocks.STRIPPED_MAPLE_WOOD,
+                ModBlocks.STRIPPED_BAOBAB_WOOD,
+                ModBlocks.CHERRY_WOOD,
+                ModBlocks.MAPLE_WOOD,
+                ModBlocks.BAOBAB_WOOD,
+                ModBlocks.MAPLE_SLAB,
+
+                //decorations
+                ModBlocks.CHERRY_SAPLING,
+                ModBlocks.MAPLE_SAPLING,
+                ModBlocks.AUTUMN_BIRCH_SAPLING,
+                ModBlocks.BAOBAB_SAPLING,
+                ModBlocks.CHERRY_LEAVES,
+                ModBlocks.MAPLE_LEAVES,
+                ModBlocks.AUTUMN_BIRCH_LEAVES,
+                ModBlocks.BAOBAB_LEAVES,
+                ModBlocks.PANSY,
+                ModBlocks.CROCUS,
+                ModBlocks.WHITE_COSMOS,
+                ModBlocks.CRIMSON_COSMOS,
+                ModBlocks.ORANGE_COSMOS,
+                ModBlocks.MAGENTA_COSMOS
         );
     }
 
     @SubscribeEvent
     public static void onItemsRegistry(final RegistryEvent.Register<Item> event) {
-        Item.Properties buildingBlocks = new Item.Properties().group(ItemGroup.BUILDING_BLOCKS);
-        Item.Properties decorations = new Item.Properties().group(ItemGroup.DECORATIONS);
-
+        //registers items and block items
         event.getRegistry().registerAll(
-                new BlockItem(ModBlocks.MAPLE_LEAVES, decorations).setRegistryName("maple_leaves"),
-                new BlockItem(ModBlocks.AUTUMN_BIRCH_LEAVES, decorations).setRegistryName("autumn_birch_leaves"),
-                new BlockItem(ModBlocks.BAOBAB_LEAVES, decorations).setRegistryName("baobab_leaves"),
-                new BlockItem(ModBlocks.MAPLE_SAPLING, decorations).setRegistryName("maple_sapling"),
-                new BlockItem(ModBlocks.AUTUMN_BIRCH_SAPLING, decorations).setRegistryName("autumn_birch_sapling"),
-                new BlockItem(ModBlocks.BAOBAB_SAPLING, decorations).setRegistryName("baobab_sapling"),
-                new BlockItem(ModBlocks.MAPLE_PLANKS, buildingBlocks).setRegistryName("maple_planks"),
-                new BlockItem(ModBlocks.BAOBAB_PLANKS, buildingBlocks).setRegistryName("baobab_planks"),
-                new BlockItem(ModBlocks.MAPLE_LOG, buildingBlocks).setRegistryName("maple_log"),
-                new BlockItem(ModBlocks.BAOBAB_LOG, buildingBlocks).setRegistryName("baobab_log"),
-                new BlockItem(ModBlocks.STRIPPED_MAPLE_LOG, buildingBlocks).setRegistryName("stripped_maple_log"),
-                new BlockItem(ModBlocks.STRIPPED_BAOBAB_LOG, buildingBlocks).setRegistryName("stripped_baobab_log"),
-                new BlockItem(ModBlocks.STRIPPED_MAPLE_WOOD, buildingBlocks).setRegistryName("stripped_maple_wood"),
-                new BlockItem(ModBlocks.STRIPPED_BAOBAB_WOOD, buildingBlocks).setRegistryName("stripped_baobab_wood"),
-                new BlockItem(ModBlocks.MAPLE_WOOD, buildingBlocks).setRegistryName("maple_wood"),
-                new BlockItem(ModBlocks.BAOBAB_WOOD, buildingBlocks).setRegistryName("baobab_wood")
+                //building blocks
+                ModItems.CHERRY_PLANKS,
+                ModItems.MAPLE_PLANKS,
+                ModItems.BAOBAB_PLANKS,
+                ModItems.CHERRY_LOG,
+                ModItems.MAPLE_LOG,
+                ModItems.BAOBAB_LOG,
+                ModItems.STRIPPED_CHERRY_LOG,
+                ModItems.STRIPPED_MAPLE_LOG,
+                ModItems.STRIPPED_BAOBAB_LOG,
+                ModItems.STRIPPED_CHERRY_WOOD,
+                ModItems.STRIPPED_MAPLE_WOOD,
+                ModItems.STRIPPED_BAOBAB_WOOD,
+                ModItems.CHERRY_WOOD,
+                ModItems.MAPLE_WOOD,
+                ModItems.BAOBAB_WOOD,
+                ModItems.MAPLE_SLAB,
+
+                //decoration blocks
+                ModItems.CHERRY_SAPLING,
+                ModItems.MAPLE_SAPLING,
+                ModItems.AUTUMN_BIRCH_SAPLING,
+                ModItems.BAOBAB_SAPLING,
+                ModItems.CHERRY_LEAVES,
+                ModItems.MAPLE_LEAVES,
+                ModItems.AUTUMN_BIRCH_LEAVES,
+                ModItems.BAOBAB_LEAVES,
+                ModItems.PANSY,
+                ModItems.CROCUS,
+                ModItems.WHITE_COSMOS,
+                ModItems.CRIMSON_COSMOS,
+                ModItems.ORANGE_COSMOS,
+                ModItems.MAGENTA_COSMOS,
+
+                //foodstuffs
+                ModItems.CHERRIES
         );
     }
 
     @SubscribeEvent
     public static void onBiomesRegistry(final RegistryEvent.Register<Biome> event) {
+        //registers biomes
         event.getRegistry().registerAll(
-                ModBiomes.MAPLE_FOREST = new MapleForestBiome(),
-                ModBiomes.PUMPKIN_PLAINS = new PumpkinPlainsBiome()
+                ModBiomes.MAPLE_FOREST = new MapleForestBiome().setRegistryName("maple_forest"),
+                ModBiomes.PUMPKIN_PLAINS = new PumpkinPlainsBiome().setRegistryName("pumpkin_plains")
         );
-
+        //allows biomes to spawn
         ModBiomes.registerBiomes();
     }
 }

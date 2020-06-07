@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "improvedbiomes:cherry_log"
+    }
+  },
+  "result": {
+    "item": "improvedbiomes:cherry_wood",
+    "count": 3
+  }
+}
